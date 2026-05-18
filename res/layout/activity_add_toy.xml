@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#5D4037"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="←"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="➕ Add New Toy"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Photo Selection -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📸 Select Toy Photo"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutPhotoSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtSelectedPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Photo 1 selected"
+                android:textColor="#2E7D32"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Toy Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🪆 Toy Name *"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/editToyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. Wooden Spinning Top"
+                android:textColor="#3E2723"
+                android:textColorHint="#A1887F"
+                android:padding="14dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Generated GI ID -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#2E7D32"
+                android:padding="12dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓ AUTO-GENERATED GI ID"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtGeneratedGI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CN-20260512-1234"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Format: CN-YYYYMMDD-Random"
+                    android:textColor="#C8E6C9"
+                    android:textSize="10sp"
+                    android:layout_marginTop="2dp"/>
+
+            </LinearLayout>
+
+            <!-- Heritage Process -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏺 Heritage &amp; Process"
+                android:textColor="#5D4037"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <!-- Materials -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌿 Materials Used *"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/editMaterials"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. Aale Mara wood, Vegetable dyes, Lacquer"
+                android:textColor="#3E2723"
+                android:textColorHint="#A1887F"
+                android:padding="14dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Crafting Story -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📖 Crafting Story *"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editCraftingStory"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Describe the heritage process, techniques used..."
+                android:textColor="#3E2723"
+                android:textColorHint="#A1887F"
+                android:padding="14dp"
+                android:background="#FFFFFF"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="6dp"/>
+
+            <!-- Price & Stock -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="💰 Price (₹) *"
+                        android:textColor="#5D4037"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColor="#3E2723"
+                        android:textColorHint="#A1887F"
+                        android:padding="14dp"
+                        android:background="#FFFFFF"
+                        android:inputType="number"
+                        android:layout_marginTop="6dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📦 Stock *"
+                        android:textColor="#5D4037"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0"
+                        android:textColor="#3E2723"
+                        android:textColorHint="#A1887F"
+                        android:padding="14dp"
+                        android:background="#FFFFFF"
+                        android:inputType="number"
+                        android:layout_marginTop="6dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveToy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✅ SAVE TOY"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="#5D4037"
+                android:padding="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

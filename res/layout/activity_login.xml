@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Logo Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ಚನ್ನಪಟ್ಟಣ - ನಮ್ಮ"
+            android:textColor="#5D4037"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channapatna Namma"
+            android:textColor="#8D6E63"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/txtScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back!"
+            android:textColor="#3E2723"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"/>
+
+        <TextView
+            android:id="@+id/txtScreenSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to continue"
+            android:textColor="#8D6E63"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Toggle Tab Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFE0B2"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tabVendor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vendor"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp"
+                android:background="#8D4E2A"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/tabArtisan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Artisan"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp"
+                android:background="#FFE0B2"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- Full Name (Only for Register) -->
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="#5D4037"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your full name"
+                android:textColorHint="#A1887F"
+                android:textColor="#3E2723"
+                android:padding="14dp"
+                android:background="#FFFFFF"
+                android:inputType="textPersonName"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="#5D4037"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="example@email.com"
+            android:textColorHint="#A1887F"
+            android:textColor="#3E2723"
+            android:padding="14dp"
+            android:background="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:textAllCaps="false"
+            android:digits="abcdefghijklmnopqrstuvwxyz0123456789@._-"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#5D4037"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Password Field with Eye Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Enter 8 character password"
+                android:textColorHint="#A1887F"
+                android:textColor="#3E2723"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:inputType="textPassword"
+                android:maxLength="8"/>
+
+            <!-- Eye Icon Button -->
+            <TextView
+                android:id="@+id/btnEyeToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👁"
+                android:textSize="22sp"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- Password Hint -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="* Password must be exactly 8 characters\n* Letters, numbers and special characters allowed"
+            android:textColor="#8D6E63"
+            android:textSize="11sp"
+            android:textStyle="italic"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Main Action Button -->
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="#8D4E2A"
+            android:padding="16dp"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Switch Mode Text -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txtSwitchMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New user? "
+                android:textColor="#5D4037"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/txtSwitchMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register Here"
+                android:textColor="#8D4E2A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#8D4E2A"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>

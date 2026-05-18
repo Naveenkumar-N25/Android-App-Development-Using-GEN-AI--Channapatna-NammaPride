@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Logo Circle -->
+    <com.example.nammapridechannapatna.LogoView
+        android:id="@+id/logo_circle"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:contentDescription="Logo Background"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <!-- GI CERTIFIED Badge -->
+    <TextView
+        android:id="@+id/gi_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✓ GI CERTIFIED"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="#2E7D32"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <!-- Kannada Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ಚನ್ನಪಟ್ಟಣ - ನಮ್ಮ"
+        android:textColor="#3E2723"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+
+    <!-- English Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Channapatna Namma"
+        android:textColor="#5D4037"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heritage · Authenticity · Pride"
+        android:textColor="#CC9A06"
+        android:textSize="13sp"
+        android:textStyle="italic"/>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!-- Bottom Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌿 Empowering Local Artisans"
+        android:textColor="#5D4037"
+        android:textSize="14sp"/>
+
+</LinearLayout>

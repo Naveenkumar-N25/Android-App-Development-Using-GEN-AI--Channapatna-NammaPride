@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtWithdrawalId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WD12345"
+                android:textColor="#3E2723"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtWithdrawalBank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank"
+                android:textColor="#5D4037"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/txtWithdrawalAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="#8D6E63"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/txtWithdrawalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-₹500"
+                android:textColor="#C62828"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtWithdrawalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ COMPLETED"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="#2E7D32"
+                android:padding="4dp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtWithdrawalDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#8D6E63"
+        android:textSize="11sp"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>

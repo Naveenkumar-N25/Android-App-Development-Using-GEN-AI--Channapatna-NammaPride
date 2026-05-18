@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_margin="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtEarningToyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toy Name"
+                android:textColor="#3E2723"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtEarningGiId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GI"
+                android:textColor="#2E7D32"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/txtEarningOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order"
+                android:textColor="#5D4037"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/txtEarningAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+₹500"
+                android:textColor="#2E7D32"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtEarningStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ CREDITED"
+                android:textColor="#FFFFFF"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:background="#2E7D32"
+                android:padding="4dp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtEarningDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="#8D6E63"
+        android:textSize="11sp"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>

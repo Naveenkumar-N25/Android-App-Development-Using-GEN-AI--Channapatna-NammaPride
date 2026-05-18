@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFF8E7">
+
+        <!-- Top Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#8D4E2A"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome Vendor"
+                        android:textColor="#FFE0B2"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/txtVendorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <!-- Cart Button -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/btnCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛒"
+                        android:textSize="28sp"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/txtCartBadge"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="#C62828"
+                        android:layout_gravity="top|end"/>
+
+                </FrameLayout>
+
+                <!-- ✅ Profile Icon - Opens Drawer from Right -->
+                <TextView
+                    android:id="@+id/btnProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textSize="28sp"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="4dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍"
+                    android:textSize="18sp"
+                    android:padding="8dp"/>
+
+                <EditText
+                    android:id="@+id/searchToys"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Search toys..."
+                    android:textColorHint="#A1887F"
+                    android:textColor="#3E2723"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:inputType="text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Section Title -->
+        <TextView
+            android:id="@+id/txtSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎨 Authentic Channapatna Toys"
+            android:textColor="#5D4037"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="12dp"/>
+
+        <!-- Toy List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerToys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"/>
+
+    </LinearLayout>
+
+    <!-- ===== ✅ SIDE DRAWER FROM RIGHT ===== -->
+    <LinearLayout
+        android:id="@+id/drawerContent"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="#FFF8E7"
+        android:elevation="16dp">
+
+        <!-- Profile Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#8D4E2A"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="👤"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:background="#FFE0B2"
+                android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/drawerUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/drawerUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@example.com"
+                android:textColor="#FFE0B2"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/drawerUserType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VENDOR"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="#2E7D32"
+                android:padding="6dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Menu Grid -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Profile Settings -->
+                <LinearLayout
+                    android:id="@+id/menuProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Settings"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#8D6E63"
+                        android:textSize="22sp"/>
+
+                </LinearLayout>
+
+                <!-- Change Password -->
+                <LinearLayout
+                    android:id="@+id/menuPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🔐"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#8D6E63"
+                        android:textSize="22sp"/>
+
+                </LinearLayout>
+
+                <!-- My Orders -->
+                <LinearLayout
+                    android:id="@+id/menuOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📦"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="My Orders"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#8D6E63"
+                        android:textSize="22sp"/>
+
+                </LinearLayout>
+
+                <!-- Cart -->
+                <LinearLayout
+                    android:id="@+id/menuCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛒"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="My Cart"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:id="@+id/menuCartBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:background="#C62828"
+                        android:padding="6dp"/>
+
+                </LinearLayout>
+
+                <!-- About -->
+                <LinearLayout
+                    android:id="@+id/menuAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ℹ️"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="About App"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="›"
+                        android:textColor="#8D6E63"
+                        android:textSize="22sp"/>
+
+                </LinearLayout>
+
+                <!-- Logout -->
+                <LinearLayout
+                    android:id="@+id/menuLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#C62828"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="↪️"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+                <!-- App Version -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Channapatna Namma v1.0"
+                    android:textColor="#A1887F"
+                    android:textSize="11sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

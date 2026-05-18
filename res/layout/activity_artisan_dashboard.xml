@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF8E7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#5D4037"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🎨 Artisan Workshop"
+                            android:textColor="#FFE0B2"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/txtArtisanName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome!"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnArtisanProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤"
+                        android:textSize="32sp"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                </LinearLayout>
+
+                <!-- Statistics Cards -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#8D4E2A"
+                        android:padding="14dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/statTotalToys"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🪆 Toys"
+                            android:textColor="#FFE0B2"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#2E7D32"
+                        android:padding="14dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp">
+
+                        <TextView
+                            android:id="@+id/statTotalStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📦 Stock"
+                            android:textColor="#C8E6C9"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="#C62828"
+                        android:padding="14dp"
+                        android:gravity="center"
+                        android:layout_marginStart="8dp">
+
+                        <TextView
+                            android:id="@+id/statOutOfStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚠️ Empty"
+                            android:textColor="#FFCDD2"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- ✅ NEW - Earnings Highlight Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="#1B5E20"
+                    android:padding="14dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💰"
+                        android:textSize="32sp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Balance"
+                            android:textColor="#C8E6C9"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txtBalanceHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹0"
+                            android:textColor="#FFFFFF"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View →"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Section Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🏗️ Artisan Tools"
+                android:textColor="#5D4037"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="16dp"/>
+
+            <!-- 2-Column Grid Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Add Toy -->
+                    <LinearLayout
+                        android:id="@+id/cardAddToy"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#FFE0B2"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="➕"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Toy"
+                            android:textColor="#3E2723"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Generate GI ID"
+                            android:textColor="#5D4037"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- My Toys -->
+                    <LinearLayout
+                        android:id="@+id/cardMyToys"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#FFCC80"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🪆"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Toys"
+                            android:textColor="#3E2723"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="View All"
+                            android:textColor="#5D4037"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Inventory -->
+                    <LinearLayout
+                        android:id="@+id/cardInventory"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#A5D6A7"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📦"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Inventory"
+                            android:textColor="#1B5E20"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Manage Stock"
+                            android:textColor="#2E7D32"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Profile -->
+                    <LinearLayout
+                        android:id="@+id/cardProfile"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#90CAF9"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🪪"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Digital Profile"
+                            android:textColor="#0D47A1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GIS Workshop"
+                            android:textColor="#1565C0"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Heritage -->
+                    <LinearLayout
+                        android:id="@+id/cardHeritage"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#CE93D8"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🏺"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Heritage"
+                            android:textColor="#4A148C"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Process Logger"
+                            android:textColor="#6A1B9A"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- ✅ NEW - Earnings Card -->
+                    <LinearLayout
+                        android:id="@+id/cardEarnings"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#81C784"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💰"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Earnings"
+                            android:textColor="#1B5E20"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:id="@+id/txtEarningsAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹0"
+                            android:textColor="#1B5E20"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Row 4 - Bank & Logout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- ✅ NEW - Bank Details Card -->
+                    <LinearLayout
+                        android:id="@+id/cardBank"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#FFCC02"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🏦"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bank Details"
+                            android:textColor="#3E2723"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup Account"
+                            android:textColor="#5D4037"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Logout -->
+                    <LinearLayout
+                        android:id="@+id/cardLogout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="160dp"
+                        android:orientation="vertical"
+                        android:background="#EF9A9A"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:layout_margin="6dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="↪️"
+                            android:textSize="42sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:textColor="#B71C1C"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Exit Workshop"
+                            android:textColor="#C62828"
+                            android:textSize="11sp"
+                            android:layout_marginTop="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- ===== SIDE DRAWER ===== -->
+    <LinearLayout
+        android:id="@+id/drawerContent"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:background="#FFF8E7"
+        android:elevation="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#5D4037"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="🎨"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:background="#FFE0B2"
+                android:padding="16dp"/>
+
+            <TextView
+                android:id="@+id/drawerArtisanName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artisan Name"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/drawerArtisanEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email"
+                android:textColor="#FFE0B2"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARTISAN"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="#2E7D32"
+                android:padding="6dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:id="@+id/drawerMenuProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🪪"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Digital Profile"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawerMenuToys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🪆"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="My Toys"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawerMenuInventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📦"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Inventory"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+                <!-- ✅ NEW - Earnings Menu -->
+                <LinearLayout
+                    android:id="@+id/drawerMenuEarnings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💰"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="My Earnings"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                    <TextView
+                        android:id="@+id/drawerEarningsBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:background="#2E7D32"
+                        android:padding="6dp"/>
+
+                </LinearLayout>
+
+                <!-- ✅ NEW - Bank Details Menu -->
+                <LinearLayout
+                    android:id="@+id/drawerMenuBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏦"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Bank Details"
+                        android:textColor="#3E2723"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/drawerMenuLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#C62828"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="↪️"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="14dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

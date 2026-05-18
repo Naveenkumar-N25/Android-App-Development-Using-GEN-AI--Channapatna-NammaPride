@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="14dp"
+    android:layout_margin="6dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgInventoryToy"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/txtInventoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toy Name"
+            android:textColor="#3E2723"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtInventoryGI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GI"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/txtInventoryStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stock: 0"
+            android:textColor="#5D4037"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/btnMinus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="−"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#C62828"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/txtCurrentStock"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="0"
+            android:textColor="#3E2723"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#FFE0B2"/>
+
+        <TextView
+            android:id="@+id/btnPlus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="#2E7D32"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</LinearLayout>
